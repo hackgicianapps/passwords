@@ -1,0 +1,6 @@
+c:\users\andy\documents\visual studio 2013\Projects\PW\PW\bin\Debug\PW.exe.config
+c:\users\andy\documents\visual studio 2013\Projects\PW\PW\bin\Debug\PW.exe
+c:\users\andy\documents\visual studio 2013\Projects\PW\PW\bin\Debug\PW.pdb
+c:\users\andy\documents\visual studio 2013\Projects\PW\PW\obj\Debug\PW.exe
+c:\users\andy\documents\visual studio 2013\Projects\PW\PW\obj\Debug\PW.pdb
+c:\users\andy\documents\visual studio 2013\Projects\PW\PW\obj\Debug\PW.csprojResolveAssemblyReference.cache
