@@ -58,16 +58,18 @@ namespace PW
                     crypt = crypt.Trim();
                     try
                     {
-                        Console.WriteLine("Decrypting your " + crypt + " password...");
-                        System.IO.StreamReader file = new System.IO.StreamReader(@"./" + crypt + ".txt");
-                        int counter = 0;
-                        string line;
-                        while((line = file.ReadLine()) != null)
+                        if (crypt.Length < 15)
                         {
-                            crypt = line;
+                            Console.WriteLine("Decrypting your " + crypt + " password...");
+                            System.IO.StreamReader file = new System.IO.StreamReader(@"./" + crypt + ".txt");
+                            string line;
+                            while ((line = file.ReadLine()) != null)
+                            {
+                                crypt = line;
+                            }
+                            file.Close();
+                            Console.WriteLine(crypt);
                         }
-                        file.Close();
-                        Console.WriteLine(crypt);
                         crypt = Crypt.Decrypt(crypt, true);
                         crypt = Crypt.Decrypt(crypt, true);
                         crypt = Crypt.Decrypt(crypt, true);
@@ -86,6 +88,7 @@ namespace PW
                     catch(Exception e)
                     {
                         Console.WriteLine("Doesn't look like that exists in our database... Sorry...");
+                        Console.WriteLine(e);
                     }
                 }
                 else if (crypt.Equals("end"))
